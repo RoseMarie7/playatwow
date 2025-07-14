@@ -10,7 +10,7 @@ const home = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    image: z.string(),
+    image: z.string().optional(),
     date: z.date(),
   }),
 });
@@ -19,7 +19,7 @@ const about = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    image: z.string(),
+    image: z.string().optional(),
     date: z.date(),
   }),
 });
@@ -28,7 +28,7 @@ const beliefs = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    image: z.string(),
+    image: z.string().optional(),
     date: z.date(),
   }),
 });
@@ -37,7 +37,7 @@ const services = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    image: z.string(),
+    image: z.string().optional(),
     date: z.date(),
   }),
 });
@@ -55,7 +55,7 @@ const blog = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    image: z.string(),
+    image: z.string().optional(),
     date: z.date(),
   }),
 });
@@ -64,7 +64,7 @@ const community = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    image: z.string(),
+    image: z.string().optional(),
     date: z.date(),
   }),
 });
