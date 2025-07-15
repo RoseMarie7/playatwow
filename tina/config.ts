@@ -31,7 +31,7 @@ export default defineConfig({
       {
         name: "home",
         label: "Home",
-        path: "content/home",
+        path: "src/content/home",
         fields: [
           {
             type: "string",
@@ -56,7 +56,7 @@ export default defineConfig({
       {
         name: "about",
         label: "About",
-        path: "content/about",
+        path: "src/content/about",
         fields: [
           {
             type: "string",
@@ -81,7 +81,7 @@ export default defineConfig({
       {
         name: "beliefs",
         label: "Beliefs",
-        path: "content/beliefs",
+        path: "src/content/beliefs",
         fields: [
           {
             type: "string",
@@ -106,7 +106,7 @@ export default defineConfig({
       {
         name: "services",
         label: "Services",
-        path: "content/services",
+        path: "src/content/services",
         fields: [
           {
             type: "string",
@@ -131,7 +131,7 @@ export default defineConfig({
       {
         name: "programs",
         label: "Programs",
-        path: "content/programs",
+        path: "src/content/programs",
         fields: [
           {
             type: "string",
@@ -156,7 +156,7 @@ export default defineConfig({
       {
         name: "blog",
         label: "Blog",
-        path: "content/blog",
+        path: "src/content/blog",
         fields: [
           {
             type: "string",
@@ -181,7 +181,7 @@ export default defineConfig({
       {
         name: "community",
         label: "Community",
-        path: "content/community",
+        path: "src/content/community",
         fields: [
           {
             type: "string",
