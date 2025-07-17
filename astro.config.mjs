@@ -1,7 +1,7 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
-import tina from "astro-tina";
+import tinaDirective from "./astro-tina-directive/register";
 
 import react from "@astrojs/react";
 
@@ -11,5 +11,5 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
 
-  integrations: [react(), tina()],
+  integrations: [react(), tinaDirective()],
 });
