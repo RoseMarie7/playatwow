@@ -1,12 +1,14 @@
 ---
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import Test from '@components/react/Test';
 import client from "@tina/__generated__/client";
 
 const data = await client.queries.home({relativePath: "hello-world.md"});
 ---
 
 <Layout>
+	<Test {...data} client:tina />
 	<p>Hello, world! Another change? This has been updated!</p>
 	<Welcome />
 </Layout>
