@@ -16,8 +16,8 @@ export default function Test(props: Props) {
   });
   const home = data.home;
   return (
-    <div data-tina-field={tinaField(home, "body")}>
-      <TinaMarkdown content={home.body} />
+    <div data-tina-field={tinaField(home.heroSection, "content")}>
+      <TinaMarkdown content={home.heroSection?.content} />
     </div>
   );
 }

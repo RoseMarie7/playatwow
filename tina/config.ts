@@ -1,4 +1,5 @@
 import { defineConfig } from "tinacms";
+import { HomeCollection } from "./collections/home";
 
 // Your hosting provider likely exposes this as an environment variable
 const branch =
@@ -28,31 +29,7 @@ export default defineConfig({
   // See docs on content modeling for more info on how to setup new content models: https://tina.io/docs/schema/
   schema: {
     collections: [
-      {
-        name: "home",
-        label: "Home",
-        path: "src/content/home",
-        fields: [
-          {
-            type: "string",
-            name: "title",
-            label: "Title",
-            isTitle: true,
-            required: true,
-          },
-          {
-            type: "image",
-            name: "image",
-            label: "Image",
-          },
-          {
-            type: "rich-text",
-            name: "body",
-            label: "Body",
-            isBody: true,
-          },
-        ],
-      },
+      HomeCollection,
       {
         name: "about",
         label: "About",
