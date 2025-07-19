@@ -8,23 +8,18 @@ import {
   ColumnSection,
 } from "../templates/page-sections";
 
-export const HomePage: Collection = {
-  name: "home",
-  label: "Home",
+export const Pages: Collection = {
+  name: "pages",
+  label: "Pages",
   path: "src/content",
   match: {
-    include: "home",
+    exclude: "home",
   },
   format: "md",
   ui: {
     router: ({ document }) => {
-      return "/";
+      return `/${document._sys.filename}`;
     },
-    allowedActions: {
-      create: false,
-      delete: false,
-    },
-    global: true,
   },
   fields: [
     {
