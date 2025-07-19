@@ -1,12 +1,10 @@
-import type { PagesPageSectionsDescriptionSection } from "@tina/__generated__/types";
+import type { PagesPageSectionsColumnSection } from "@tina/__generated__/types";
 
-export default function DescriptionSection(
-  props: PagesPageSectionsDescriptionSection
-) {
+export default function ColumnSection(props: PagesPageSectionsColumnSection) {
   return (
     <div>
       <h1>{props.title}</h1>
-      {props.descriptionBlocks?.map((block, i) => {
+      {props.columnBlocks?.map((block, i) => {
         return (
           <div key={i}>
             <h2>{block?.title}</h2>

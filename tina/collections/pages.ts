@@ -22,6 +22,7 @@ export const Pages: Collection = {
     },
   },
   fields: [
+    { name: "seoTitle", label: "Title", type: "string", required: true },
     {
       name: "pageSections",
       label: "Page Sections",

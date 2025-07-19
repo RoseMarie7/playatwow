@@ -1,12 +1,12 @@
-import type { PagesPageSectionsDescriptionSection } from "@tina/__generated__/types";
+import type { PagesPageSectionsAppointmentsSection } from "@tina/__generated__/types";
 
-export default function DescriptionSection(
-  props: PagesPageSectionsDescriptionSection
+export default function AppointmentsSection(
+  props: PagesPageSectionsAppointmentsSection
 ) {
   return (
     <div>
       <h1>{props.title}</h1>
-      {props.descriptionBlocks?.map((block, i) => {
+      {props.appointmentsBlocks?.map((block, i) => {
         return (
           <div key={i}>
             <h2>{block?.title}</h2>
