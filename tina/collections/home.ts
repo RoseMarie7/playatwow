@@ -1,6 +1,6 @@
 import type { Collection } from "tinacms";
 
-export const HomeCollection: Collection = {
+export const HomePage: Collection = {
   name: "home",
   label: "Home",
   path: "src/content/home",
@@ -9,6 +9,11 @@ export const HomeCollection: Collection = {
     router: ({ document }) => {
       return "/";
     },
+    allowedActions: {
+      create: false,
+      delete: false,
+    },
+    global: true,
   },
   fields: [
     {
