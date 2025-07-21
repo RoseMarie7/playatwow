@@ -10,7 +10,7 @@ import QuoteSection from "../../tina/components/QuoteSection";
 import TestimonialsSection from "../../tina/components/TestimonialsSection";
 import ColumnSection from "../../tina/components/ColumnSection";
 
-export function PageComponent(props: {
+export default function Page(props: {
   data: PagesQuery;
   variables: PagesQueryVariables;
   query: string;

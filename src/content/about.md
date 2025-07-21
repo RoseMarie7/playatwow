@@ -1,6 +1,8 @@
 ---
 seoTitle: About
 pageSections:
-  - _template: heroSection
+  - content: ''
+    image: /hero.webp
+    _template: heroSection
 ---
 

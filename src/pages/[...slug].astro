@@ -1,6 +1,8 @@
 ---
 import { getCollection } from "astro:content";
 import { client } from "../../tina/__generated__/client";
+import Layout from '@layouts/Layout.astro';
+import Page from '@components/Page.tsx';
 
 
 export async function getStaticPaths() {
@@ -19,3 +21,7 @@ export async function getStaticPaths() {
 const { getTinaProps } = Astro.props;
 const data = await getTinaProps();
 ---
+
+<Layout>
+	<Page {...data} client:tina />
+</Layout>
