@@ -9,6 +9,23 @@
   src: url("/fonts/Righteous-Regular.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: Josefin Sans;
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url("/fonts/JosefinSans-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Josefin Sans;
+  font-style: italic;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url("/fonts/JosefinSans-Italic-VariableFont_wght.ttf") format("truetype");
+}
+
 @theme {
-  --font-hero: "Righteous", "sans-serif", "system-ui";
+  --font-righteous: "Righteous", "sans-serif", "system-ui";
+  --font-josefin-sans: "Josefin Sans", "Arial", "sans-serif";
 }

@@ -26,7 +26,7 @@ export default function HeroSection(props: PagesPageSectionsHeroSection) {
       // Background image must be applied inline, as Tailwind CSS does not support dynamic background images
       style={{ backgroundImage: `url(${props.image})` }}
     >
-      <div className="font-hero flex flex-col gap-4 items-center justify-center h-full">
+      <div className="font-righteous flex flex-col gap-4 items-center justify-center h-full">
         <h1 className="text-5xl font-bold text-[#c49800]">{props.title}</h1>
         <TinaMarkdown content={props.content} components={components} />
       </div>
