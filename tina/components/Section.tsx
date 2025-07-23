@@ -1,6 +1,10 @@
-export default function Section(props: any) {
+export default function Section({ tinaField, ...props }: any) {
   return (
-    <section className={props.className} style={props.style}>
+    <section
+      data-tina-field={tinaField}
+      className={props.className}
+      style={props.style}
+    >
       <div className="max-w-7xl mx-auto h-full">{props.children}</div>
     </section>
   );
