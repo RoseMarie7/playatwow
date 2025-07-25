@@ -3,12 +3,11 @@ import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 import Test from '@tina/components/home/Test';
 import client from "@tina/__generated__/client";
+import HomePage from '@components/HomePage.tsx';
 
 const data = await client.queries.home({relativePath: "home.md"});
 ---
 
 <Layout>
-	<Test {...data} client:tina />
-	<p>Hello, world! Another change? This has been updated!</p>
-	<Welcome />
+	<HomePage {...data} client:tina />
 </Layout>

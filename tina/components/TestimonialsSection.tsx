@@ -1,8 +1,13 @@
-import type { PagesPageSectionsTestimonialsSection } from "@tina/__generated__/types";
+import type {
+  HomePageSectionsTestimonialsSection,
+  PagesPageSectionsTestimonialsSection,
+} from "@tina/__generated__/types";
 
-export default function TestimonialsSection(
-  props: PagesPageSectionsTestimonialsSection
-) {
+type TestimonialsSectionProps =
+  | PagesPageSectionsTestimonialsSection
+  | HomePageSectionsTestimonialsSection;
+
+export default function TestimonialsSection(props: TestimonialsSectionProps) {
   return (
     <div>
       <h1>{props.title}</h1>

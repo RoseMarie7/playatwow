@@ -24,7 +24,6 @@ export const HomePage: Collection = {
       create: false,
       delete: false,
     },
-    global: true,
   },
   fields: [
     {

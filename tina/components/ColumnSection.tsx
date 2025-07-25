@@ -1,6 +1,13 @@
-import type { PagesPageSectionsColumnSection } from "@tina/__generated__/types";
+import type {
+  HomePageSectionsColumnSection,
+  PagesPageSectionsColumnSection,
+} from "@tina/__generated__/types";
 
-export default function ColumnSection(props: PagesPageSectionsColumnSection) {
+type ColumnSectionProps =
+  | PagesPageSectionsColumnSection
+  | HomePageSectionsColumnSection;
+
+export default function ColumnSection(props: ColumnSectionProps) {
   return (
     <div>
       <h1>{props.title}</h1>

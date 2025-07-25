@@ -1,8 +1,13 @@
-import type { PagesPageSectionsAppointmentsSection } from "@tina/__generated__/types";
+import type {
+  HomePageSectionsAppointmentsSection,
+  PagesPageSectionsAppointmentsSection,
+} from "@tina/__generated__/types";
 
-export default function AppointmentsSection(
-  props: PagesPageSectionsAppointmentsSection
-) {
+type AppointmentsSectionProps =
+  | PagesPageSectionsAppointmentsSection
+  | HomePageSectionsAppointmentsSection;
+
+export default function AppointmentsSection(props: AppointmentsSectionProps) {
   return (
     <div>
       <h1>{props.title}</h1>

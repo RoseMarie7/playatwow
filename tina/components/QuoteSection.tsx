@@ -1,6 +1,13 @@
-import type { PagesPageSectionsQuoteSection } from "@tina/__generated__/types";
+import type {
+  HomePageSectionsQuoteSection,
+  PagesPageSectionsQuoteSection,
+} from "@tina/__generated__/types";
 
-export default function QuoteSection(props: PagesPageSectionsQuoteSection) {
+type QuoteSectionProps =
+  | PagesPageSectionsQuoteSection
+  | HomePageSectionsQuoteSection;
+
+export default function QuoteSection(props: QuoteSectionProps) {
   return (
     <div>
       <h1>{props.author}</h1>

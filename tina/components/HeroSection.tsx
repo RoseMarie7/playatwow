@@ -1,7 +1,14 @@
-import type { PagesPageSectionsHeroSection } from "@tina/__generated__/types";
+import type {
+  HomePageSectionsHeroSection,
+  PagesPageSectionsHeroSection,
+} from "@tina/__generated__/types";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
 import Section from "./Section";
 import { tinaField } from "tinacms/dist/react";
+
+type HeroSectionProps =
+  | PagesPageSectionsHeroSection
+  | HomePageSectionsHeroSection;
 
 const components = {
   h2: (props: any) => {
@@ -20,7 +27,7 @@ const components = {
   },
 };
 
-export default function HeroSection(props: PagesPageSectionsHeroSection) {
+export default function HeroSection(props: HeroSectionProps) {
   return (
     <Section
       tinaField={tinaField(props, "image")}
