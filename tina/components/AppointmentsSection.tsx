@@ -2,23 +2,95 @@ import type {
   HomePageSectionsAppointmentsSection,
   PagesPageSectionsAppointmentsSection,
 } from "@tina/__generated__/types";
+import { TinaMarkdown } from "tinacms/dist/rich-text";
+import Section from "./Section";
+import { tinaField } from "tinacms/dist/react";
 
 type AppointmentsSectionProps =
   | PagesPageSectionsAppointmentsSection
   | HomePageSectionsAppointmentsSection;
 
+const components = {
+  h2: (props: any) => {
+    return (
+      <h2 className="uppercase text-5xl font-bold text-[#c49800]" {...props}>
+        {props.children}
+      </h2>
+    );
+  },
+  p: (props: any) => {
+    return (
+      <p className="font-josefin-sans font-bold mb-4" {...props}>
+        {props.children}
+      </p>
+    );
+  },
+  li: (props: any) => {
+    return (
+      <li className="list-disc" {...props}>
+        {props.children}
+      </li>
+    );
+  },
+};
+
 export default function AppointmentsSection(props: AppointmentsSectionProps) {
   return (
-    <div>
-      <h1>{props.title}</h1>
+    <Section>
+      <h2
+        data-tina-field={tinaField(props, "title")}
+        className="font-righteous uppercase text-3xl font-bold text-[#c49800] text-center"
+      >
+        {props.title}
+      </h2>
       {props.appointmentsBlocks?.map((block, i) => {
         return (
-          <div key={i}>
-            <h2>{block?.title}</h2>
-            <div dangerouslySetInnerHTML={{ __html: block?.content }} />
+          <div
+            key={i}
+            className="flex flex-col gap-4 items-center justify-around lg:flex-row"
+          >
+            {block?.image && props.title && (
+              <img
+                data-tina-field={tinaField(block, "image")}
+                src={block?.image}
+                alt={props.title}
+                width={160}
+                height={90}
+                loading="lazy"
+                decoding="async"
+                className="mask mask-square shrink-0"
+              />
+            )}
+            <div className="flex flex-col gap-4 items-center justify-center">
+              <h3
+                data-tina-field={tinaField(block, "title")}
+                className="font-josefin-sans capitalize text-2xl font-bold text-[rgb(27, 27, 27)]"
+              >
+                {block?.title}
+              </h3>
+              <div>
+                <p>
+                  <span>
+                    <span data-tina-field={tinaField(block, "duration")}>
+                      {block?.duration}
+                    </span>
+                    <span>|</span>
+                    <span data-tina-field={tinaField(block, "cost")}>
+                      {block?.cost}
+                    </span>
+                  </span>
+                </p>
+              </div>
+              <div data-tina-field={tinaField(block, "content")}>
+                <TinaMarkdown
+                  content={block?.content}
+                  components={components}
+                />
+              </div>
+            </div>
           </div>
         );
       })}
-    </div>
+    </Section>
   );
 }
