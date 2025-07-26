@@ -16,7 +16,7 @@ const components = {
   },
   p: (props: any) => {
     return (
-      <p className="font-josefin-sans font-bold text-white" {...props}>
+      <p className="font-josefin-sans font-bold" {...props}>
         {props.children}
       </p>
     );
@@ -54,6 +54,7 @@ export default function TestimonialsSection(props: TestimonialsSectionProps) {
                       height={90}
                       loading="lazy"
                       decoding="async"
+                      className="mask mask-circle"
                     />
                   </figure>
                 )}
