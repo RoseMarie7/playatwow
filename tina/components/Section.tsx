@@ -5,7 +5,9 @@ export default function Section({ tinaField, ...props }: any) {
       className={props.className}
       style={props.style}
     >
-      <div className="max-w-7xl mx-auto h-full">{props.children}</div>
+      <div className="max-w-7xl px-16 py-4 space-y-8 mx-auto h-full">
+        {props.children}
+      </div>
     </section>
   );
 }

@@ -9,32 +9,6 @@ heroSection:
 pageSections:
   - title: What They Say
     testimonialsBlocks:
-      - title: Purpose Workshop
-        profession: Sales - Post Brands
-        content: >
-          Quite enjoyable and enlightening session focusing on our purpose at
-          work, individually, as a team and as an organization.
-        image: /testi-five.webp
-      - title: Coaching Workshop
-        profession: Marketing - Nestle
-        content: >
-          Loved it! Our session was amazing! Learned the importance of
-          challenging yourself and setting your plan in action.
-        image: /testi-four.webp
-      - title: 'Speaker, Author'
-        profession: Daya
-        content: >
-          RoseMarie is an inspiring coach! She is also a great mentor to me. Her
-          passion for inspiring others and developing people to reach their
-          fullest potential is what makes her a remarkable coach.
-        image: /testi-three.webp
-      - title: Graduate Student
-        profession: Priscilla
-        content: >
-          RoseMarie is truly an excellent career coach. What I have learnt from
-          her is something that I can use for the rest of my life and it has
-          truly been an invaluable experience.
-        image: /testi-two.webp
       - title: Career Professional
         profession: Trina
         content: >
@@ -42,6 +16,32 @@ pageSections:
           approachability. I recommend her to anyone who is feeling lost, or
           simply looking to sharpen their personal or professional toolkit.
         image: /testi-one.webp
+      - title: Graduate Student
+        profession: Priscilla
+        content: >
+          RoseMarie is truly an excellent career coach. What I have learnt from
+          her is something that I can use for the rest of my life and it has
+          truly been an invaluable experience.
+        image: /testi-two.webp
+      - title: 'Speaker, Author'
+        profession: Daya
+        content: >
+          RoseMarie is an inspiring coach! She is also a great mentor to me. Her
+          passion for inspiring others and developing people to reach their
+          fullest potential is what makes her a remarkable coach.
+        image: /testi-three.webp
+      - title: Coaching Workshop
+        profession: Marketing - Nestle
+        content: >
+          Loved it! Our session was amazing! Learned the importance of
+          challenging yourself and setting your plan in action.
+        image: /testi-four.webp
+      - title: Purpose Workshop
+        profession: Sales - Post Brands
+        content: >
+          Quite enjoyable and enlightening session focusing on our purpose at
+          work, individually, as a team and as an organization.
+        image: /testi-five.webp
     _template: testimonialsSection
   - title: Play at WOW Career & Life Coaching
     descriptionBlocks:
