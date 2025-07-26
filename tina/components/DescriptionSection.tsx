@@ -34,7 +34,10 @@ export default function DescriptionSection(props: DescriptionSectionProps) {
                 data-tina-field={tinaField(block, "image")}
                 src={block?.image}
                 alt={props.title}
-                className="w-full h-auto"
+                width={1600}
+                height={900}
+                loading="lazy"
+                decoding="async"
               />
             )}
           </>
