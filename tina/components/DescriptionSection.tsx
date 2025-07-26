@@ -28,7 +28,9 @@ export default function DescriptionSection(props: DescriptionSectionProps) {
             >
               {block?.title}
             </h3>
-            <TinaMarkdown key={i} content={block?.content} />
+            <div data-tina-field={tinaField(block, "content")}>
+              <TinaMarkdown key={i} content={block?.content} />
+            </div>
             {block?.image && props.title && (
               <img
                 data-tina-field={tinaField(block, "image")}
