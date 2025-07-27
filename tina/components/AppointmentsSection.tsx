@@ -20,7 +20,7 @@ const components = {
   },
   p: (props: any) => {
     return (
-      <p className="font-josefin-sans font-bold mb-4" {...props}>
+      <p className="font-josefin-sans font-bold mb-4 text-[#a4a4a4]" {...props}>
         {props.children}
       </p>
     );
@@ -36,7 +36,7 @@ const components = {
 
 export default function AppointmentsSection(props: AppointmentsSectionProps) {
   return (
-    <Section>
+    <Section className="bg-black">
       <h2
         data-tina-field={tinaField(props, "title")}
         className="font-righteous uppercase text-3xl font-bold text-[#c49800] text-center"
@@ -47,7 +47,7 @@ export default function AppointmentsSection(props: AppointmentsSectionProps) {
         return (
           <div
             key={i}
-            className="flex flex-col gap-4 items-center justify-around lg:flex-row"
+            className="flex flex-col gap-4 items-center justify-around sm:flex-row"
           >
             {block?.image && props.title && (
               <img
@@ -61,20 +61,20 @@ export default function AppointmentsSection(props: AppointmentsSectionProps) {
                 className="mask mask-square shrink-0"
               />
             )}
-            <div className="flex flex-col gap-4 items-center justify-center">
+            <div className="flex flex-col justify-center">
               <h3
                 data-tina-field={tinaField(block, "title")}
-                className="font-josefin-sans capitalize text-2xl font-bold text-[rgb(27, 27, 27)]"
+                className="font-josefin-sans capitalize text-2xl font-bold text-white"
               >
                 {block?.title}
               </h3>
               <div>
-                <p>
+                <p className="text-[#a4a4a4] pb-4">
                   <span>
                     <span data-tina-field={tinaField(block, "duration")}>
                       {block?.duration}
                     </span>
-                    <span>|</span>
+                    <span> | </span>
                     <span data-tina-field={tinaField(block, "cost")}>
                       {block?.cost}
                     </span>

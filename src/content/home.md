@@ -7,42 +7,6 @@ heroSection:
   image: /favicon.svg
   link: blah
 pageSections:
-  - title: What They Say
-    testimonialsBlocks:
-      - title: Career Professional
-        profession: Trina
-        content: >
-          What makes RoseMarie an incredible coach is her empathy and
-          approachability. I recommend her to anyone who is feeling lost, or
-          simply looking to sharpen their personal or professional toolkit.
-        image: /testi-one.webp
-      - title: Graduate Student
-        profession: Priscilla
-        content: >
-          RoseMarie is truly an excellent career coach. What I have learnt from
-          her is something that I can use for the rest of my life and it has
-          truly been an invaluable experience.
-        image: /testi-two.webp
-      - title: 'Speaker, Author'
-        profession: Daya
-        content: >
-          RoseMarie is an inspiring coach! She is also a great mentor to me. Her
-          passion for inspiring others and developing people to reach their
-          fullest potential is what makes her a remarkable coach.
-        image: /testi-three.webp
-      - title: Coaching Workshop
-        profession: Marketing - Nestle
-        content: >
-          Loved it! Our session was amazing! Learned the importance of
-          challenging yourself and setting your plan in action.
-        image: /testi-four.webp
-      - title: Purpose Workshop
-        profession: Sales - Post Brands
-        content: >
-          Quite enjoyable and enlightening session focusing on our purpose at
-          work, individually, as a team and as an organization.
-        image: /testi-five.webp
-    _template: testimonialsSection
   - title: Play at WOW Career & Life Coaching
     descriptionBlocks:
       - title: Who I Am
@@ -82,5 +46,61 @@ pageSections:
           * Certified Facilitation
         image: /young-woman.webp
     _template: descriptionSection
+  - title: Online Appointments
+    appointmentsBlocks:
+      - title: Initial Consultation
+        duration: 30 mins
+        cost: Free
+        content: >
+          Initial call to meet and talk about your goals and how we can work
+          together to achieve them. You can decide whether you want to move
+          forward with any of our services after the call.
+        image: /young-woman.webp
+      - title: Discovery Call
+        duration: 1 hr 30 mins
+        cost: Free
+        content: >
+          Experience a live coaching session free. We recommend Initial Consult
+          first. Short exercises will be provided. At the end of the session you
+          will understand how coaching can help you and determine if it is a
+          right fit for you.
+        image: /testi-five.webp
+    _template: appointmentsSection
+  - title: What They Say
+    testimonialsBlocks:
+      - title: Career Professional
+        profession: Trina
+        content: >
+          What makes RoseMarie an incredible coach is her empathy and
+          approachability. I recommend her to anyone who is feeling lost, or
+          simply looking to sharpen their personal or professional toolkit.
+        image: /testi-one.webp
+      - title: Graduate Student
+        profession: Priscilla
+        content: >
+          RoseMarie is truly an excellent career coach. What I have learnt from
+          her is something that I can use for the rest of my life and it has
+          truly been an invaluable experience.
+        image: /testi-two.webp
+      - title: 'Speaker, Author'
+        profession: Daya
+        content: >
+          RoseMarie is an inspiring coach! She is also a great mentor to me. Her
+          passion for inspiring others and developing people to reach their
+          fullest potential is what makes her a remarkable coach.
+        image: /testi-three.webp
+      - title: Coaching Workshop
+        profession: Marketing - Nestle
+        content: >
+          Loved it! Our session was amazing! Learned the importance of
+          challenging yourself and setting your plan in action.
+        image: /testi-four.webp
+      - title: Purpose Workshop
+        profession: Sales - Post Brands
+        content: >
+          Quite enjoyable and enlightening session focusing on our purpose at
+          work, individually, as a team and as an organization.
+        image: /testi-five.webp
+    _template: testimonialsSection
 ---
 
