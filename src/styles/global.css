@@ -30,4 +30,5 @@
 @theme {
   --font-righteous: "Righteous", "sans-serif", "system-ui";
   --font-josefin-sans: "Josefin Sans", "Arial", "sans-serif";
+  --shadow-hero-section: inset 0 0 3rem 6rem var(--color-base-100);
 }

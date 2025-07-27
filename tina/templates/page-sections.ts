@@ -3,6 +3,11 @@ import type { Template } from "tinacms";
 export const HeroSection: Template = {
   name: "heroSection",
   label: "Hero Section",
+  ui: {
+    itemProps: (item) => {
+      return { label: item?.title };
+    },
+  },
   fields: [
     {
       name: "title",
@@ -25,6 +30,11 @@ export const HeroSection: Template = {
 export const DescriptionSection: Template = {
   name: "descriptionSection",
   label: "Description Section",
+  ui: {
+    itemProps: (item) => {
+      return { label: item?.title };
+    },
+  },
   fields: [
     {
       name: "title",
@@ -65,6 +75,11 @@ export const DescriptionSection: Template = {
 export const AppointmentsSection: Template = {
   name: "appointmentsSection",
   label: "Appointments Section",
+  ui: {
+    itemProps: (item) => {
+      return { label: item?.title };
+    },
+  },
   fields: [
     {
       name: "title",
@@ -115,6 +130,11 @@ export const AppointmentsSection: Template = {
 export const QuoteSection: Template = {
   name: "quoteSection",
   label: "Quote Section",
+  ui: {
+    itemProps: (item) => {
+      return { label: item?.author };
+    },
+  },
   fields: [
     {
       name: "author",
@@ -137,6 +157,11 @@ export const QuoteSection: Template = {
 export const TestimonialsSection: Template = {
   name: "testimonialsSection",
   label: "Testimonials Section",
+  ui: {
+    itemProps: (item) => {
+      return { label: item?.title };
+    },
+  },
   fields: [
     {
       name: "title",
@@ -182,6 +207,11 @@ export const TestimonialsSection: Template = {
 export const ColumnSection: Template = {
   name: "columnSection",
   label: "Column Section",
+  ui: {
+    itemProps: (item) => {
+      return { label: item?.title };
+    },
+  },
   fields: [
     {
       name: "title",

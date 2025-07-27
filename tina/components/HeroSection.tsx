@@ -13,7 +13,10 @@ type HeroSectionProps =
 const components = {
   h2: (props: any) => {
     return (
-      <h2 className="uppercase text-5xl font-bold text-[#c49800]" {...props}>
+      <h2
+        className="uppercase text-5xl pb-4 font-bold text-[#c49800]"
+        {...props}
+      >
         {props.children}
       </h2>
     );
@@ -31,14 +34,14 @@ export default function HeroSection(props: HeroSectionProps) {
   return (
     <Section
       tinaField={tinaField(props, "image")}
-      className="bg-center bg-no-repeat bg-cover h-screen"
+      className="bg-center p-8 bg-no-repeat bg-cover h-screen shadow-hero-section"
       // Background image must be applied inline, as Tailwind CSS does not support dynamic background images
       style={{ backgroundImage: `url(${props.image})` }}
     >
-      <div className="font-righteous flex flex-col gap-4 items-center justify-center h-full">
+      <div className="font-righteous flex flex-col gap-8 items-center justify-center h-full">
         <h1
           data-tina-field={tinaField(props, "title")}
-          className="uppercase text-5xl font-bold text-[#c49800]"
+          className="uppercase text-7xl font-bold text-[#c49800]"
         >
           {props.title}
         </h1>

@@ -7,6 +7,13 @@ heroSection:
   image: /favicon.svg
   link: blah
 pageSections:
+  - title: Play at WOW
+    content: |
+      ## Where Wonder Meets You
+
+      A place where women can explore, grow, and thrive through change.
+    image: /hero.webp
+    _template: heroSection
   - title: Play at WOW Career & Life Coaching
     descriptionBlocks:
       - title: Who I Am
