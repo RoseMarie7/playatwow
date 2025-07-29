@@ -73,6 +73,12 @@ pageSections:
           right fit for you.
         image: /testi-five.webp
     _template: appointmentsSection
+  - author: Ralph Waldo Emerson
+    quote: >
+      "The only person you are destined to become is the person you decide to
+      be."
+    image: /woman-pointing.webp
+    _template: quoteSection
   - title: What They Say
     testimonialsBlocks:
       - title: Career Professional
