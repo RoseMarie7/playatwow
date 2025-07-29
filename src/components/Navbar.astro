@@ -1,4 +1,5 @@
 ---
+const { pathname } = Astro.url;
 ---
 
 <nav class="navbar sticky top-0 z-50 bg-base-100 pr-8 shadow-lg">
@@ -8,13 +9,13 @@
     </a>
   </div>
   <ul class="ml-auto hidden lg:flex">
-    <li><a href="/" class="btn btn-ghost normal-case text-xl">Home</a></li>
-    <li><a href="/about" class="btn btn-ghost normal-case text-xl">About</a></li>
-    <li><a href="/core-beliefs" class="btn btn-ghost normal-case text-xl">Core Beliefs</a></li>
-    <li><a href="/services" class="btn btn-ghost normal-case text-xl">Services</a></li>
-    <li><a href="/programs" class="btn btn-ghost normal-case text-xl">Programs</a></li>
-    <li><a href="/blog" class="btn btn-ghost normal-case text-xl">Blog</a></li>
-    <li><a href="/community" class="btn btn-ghost normal-case text-xl">Community</a></li>
+    <li><a href="/" class={`${pathname === "/" ? "underline" : "no-underline"} btn btn-link text-black hover:text-[#c49800] normal-case text-xl`}>Home</a></li>
+    <li><a href="/about" class={`${pathname === "/about" ? "underline" : "no-underline"} btn btn-link text-black hover:text-[#c49800] normal-case text-xl`}>About</a></li>
+    <li><a href="/core-beliefs" class={`${pathname === "/core-beliefs" ? "underline" : "no-underline"} btn btn-link text-black hover:text-[#c49800] normal-case text-xl`}>Core Beliefs</a></li>
+    <li><a href="/services" class={`${pathname === "/services" ? "underline" : "no-underline"} btn btn-link text-black hover:text-[#c49800] normal-case text-xl`}>Services</a></li>
+    <li><a href="/programs" class={`${pathname === "/programs" ? "underline" : "no-underline"} btn btn-link text-black hover:text-[#c49800] normal-case text-xl`}>Programs</a></li>
+    <li><a href="/blog" class={`${pathname === "/blog" ? "underline" : "no-underline"} btn btn-link text-black hover:text-[#c49800] normal-case text-xl`}>Blog</a></li>
+    <li><a href="/community" class={`${pathname === "/community" ? "underline" : "no-underline"} btn btn-link text-black hover:text-[#c49800] normal-case text-xl`}>Community</a></li>
   </ul>
   <!-- Mobile menu toggle -->
   <div class="drawer drawer-end lg:hidden">
