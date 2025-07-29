@@ -34,7 +34,7 @@ export default function HeroSection(props: HeroSectionProps) {
   return (
     <Section
       tinaField={tinaField(props, "image")}
-      className="bg-center p-8 bg-no-repeat bg-cover h-screen shadow-hero-section"
+      className="bg-center p-8 bg-no-repeat bg-cover h-[calc(100vh-116px)] shadow-hero-section"
       // Background image must be applied inline, as Tailwind CSS does not support dynamic background images
       style={{ backgroundImage: `url(${props.image})` }}
     >

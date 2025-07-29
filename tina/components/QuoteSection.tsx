@@ -43,7 +43,7 @@ export default function QuoteSection(props: QuoteSectionProps) {
             className="mask mask-circle shrink-0"
           />
         )}
-        <div className="flex flex-col gap-4 items-center justify-center">
+        <div className="font-josefin-sans flex flex-col gap-4 items-center justify-center">
           <div data-tina-field={tinaField(props, "quote")}>
             <TinaMarkdown content={props.quote} components={components} />
           </div>

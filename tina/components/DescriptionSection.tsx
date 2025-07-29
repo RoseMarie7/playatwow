@@ -20,14 +20,14 @@ const components = {
   },
   p: (props: any) => {
     return (
-      <p className="font-josefin-sans font-bold mb-4" {...props}>
+      <p className="font-josefin-sans mb-4" {...props}>
         {props.children}
       </p>
     );
   },
   li: (props: any) => {
     return (
-      <li className="list-disc" {...props}>
+      <li className="font-josefin-sans list-disc" {...props}>
         {props.children}
       </li>
     );
