@@ -41,7 +41,7 @@ export default function HeroSection(props: HeroSectionProps) {
       <div className="font-righteous flex flex-col gap-8 items-center justify-center h-full">
         <h1
           data-tina-field={tinaField(props, "title")}
-          className="uppercase text-7xl font-bold text-[#c49800]"
+          className="uppercase text-center text-7xl font-bold text-[#c49800]"
         >
           {props.title}
         </h1>

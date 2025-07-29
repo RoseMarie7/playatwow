@@ -1,19 +1,54 @@
 ---
 ---
 
-<nav class="navbar sticky top-0 z-50 bg-base-100 shadow-lg">
+<nav class="navbar sticky top-0 z-50 bg-base-100 pr-8 shadow-lg">
   <div class="flex-none">
     <a href="/">
       <img src="/logo.webp" alt="logo" width="100" height="100" />
     </a>
   </div>
-  <div class="ml-auto">
-    <a href="/" class="btn btn-ghost normal-case text-xl">Home</a>
-    <a href="/about" class="btn btn-ghost normal-case text-xl">About</a>
-    <a href="/core-beliefs" class="btn btn-ghost normal-case text-xl">Core Beliefs</a>
-    <a href="/services" class="btn btn-ghost normal-case text-xl">Services</a>
-    <a href="/programs" class="btn btn-ghost normal-case text-xl">Programs</a>
-    <a href="/blog" class="btn btn-ghost normal-case text-xl">Blog</a>
-    <a href="/community" class="btn btn-ghost normal-case text-xl">Community</a>
+  <ul class="ml-auto hidden lg:flex">
+    <li><a href="/" class="btn btn-ghost normal-case text-xl">Home</a></li>
+    <li><a href="/about" class="btn btn-ghost normal-case text-xl">About</a></li>
+    <li><a href="/core-beliefs" class="btn btn-ghost normal-case text-xl">Core Beliefs</a></li>
+    <li><a href="/services" class="btn btn-ghost normal-case text-xl">Services</a></li>
+    <li><a href="/programs" class="btn btn-ghost normal-case text-xl">Programs</a></li>
+    <li><a href="/blog" class="btn btn-ghost normal-case text-xl">Blog</a></li>
+    <li><a href="/community" class="btn btn-ghost normal-case text-xl">Community</a></li>
+  </ul>
+  <!-- Mobile menu toggle -->
+  <div class="drawer drawer-end lg:hidden">
+    <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+    <div class="drawer-content ml-auto">
+      <!-- Page content here -->
+      <label for="my-drawer" aria-label="open sidebar" class="btn btn-square btn-ghost">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          class="inline-block h-16 w-16 stroke-current"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          ></path>
+        </svg>
+      </label>
+    </div>
+    <div class="drawer-side">
+      <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+      <ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
+        <!-- Sidebar content here -->
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/core-beliefs">Core Beliefs</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/programs">Programs</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/community">Community</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
