@@ -35,6 +35,8 @@ type ColumnSectionProps =
   | HomePageSectionsColumnSection;
 
 export default function ColumnSection(props: ColumnSectionProps) {
+  const columnsAsPercent =
+    String(Math.floor(100 / (props.columnAmount || 2))) + "%";
   return (
     <Section>
       <h1
@@ -45,15 +47,15 @@ export default function ColumnSection(props: ColumnSectionProps) {
       </h1>
       {props.columnAmount && (
         <div
-          className="grid gap-6 mx-auto"
+          className="grid"
           style={{
-            gridTemplateColumns: "repeat(auto-fit, minmax(0, 1fr))",
-            maxWidth: `${props.columnAmount * 400}px`,
+            // Grid will have at most n columns (n = columnAmount), where each column is at least 35ch wide
+            gridTemplateColumns: `repeat(auto-fit, minmax(max(35ch, ${columnsAsPercent}), 1fr))`,
           }}
         >
           {props.columnBlocks?.map((block, i) => {
             return (
-              <div className="card w-full md:w-1/2 lg:w-1/3 mx-auto" key={i}>
+              <div className="card" key={i}>
                 {block?.image && props.title && (
                   <figure>
                     <img
