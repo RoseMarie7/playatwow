@@ -2,6 +2,7 @@
 import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import tinaDirective from "./astro-tina-directive/register";
+import swup from "@swup/astro";
 
 import react from "@astrojs/react";
 
@@ -11,7 +12,7 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
 
-  integrations: [react(), tinaDirective()],
+  integrations: [react(), tinaDirective(), swup()],
   server: {
     open: "/",
   },
