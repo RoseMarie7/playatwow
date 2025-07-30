@@ -1,4 +1,5 @@
 ---
+// Static pathname logic is needed to determine which navigation item is underlined upon initial page load/reload
 const { pathname } = Astro.url;
 ---
 
@@ -53,3 +54,34 @@ const { pathname } = Astro.url;
     </div>
   </div>
 </nav>
+
+<script>
+  // Controls which navigation item is underlined upon page change
+  // Details found at: https://github.com/swup/astro?tab=readme-ov-file#access-to-the-swup-instance
+  const setup = () => {
+    const swup = (window as typeof window & { swup: import('swup').default }).swup;
+    swup.hooks.on('visit:start', (visit) => {
+      const previousPage = visit.from.url
+      const previousNavigation = document.querySelector(`li a[href="${previousPage}"]`)
+      if (previousNavigation) {
+        previousNavigation.classList.remove('underline')
+        previousNavigation.classList.add('no-underline')
+      }
+      const currentPage = visit.to.url
+      const currentNavigation = document.querySelector(`li a[href="${currentPage}"]`)
+      if (currentNavigation) {
+        currentNavigation.classList.remove('no-underline')
+        currentNavigation.classList.add('underline')
+      }
+      console.log("Previous page", previousPage)
+      console.log("Previous navigation", previousNavigation)
+      console.log("Current page", currentPage)
+      console.log("Current navigation", currentNavigation)
+    })
+  }
+  if ("swup" in window) {
+    setup()
+  } else {
+    document.addEventListener('swup:enable', setup)
+  }
+</script>
