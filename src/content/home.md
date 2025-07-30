@@ -53,6 +53,12 @@ pageSections:
           * Certified Facilitation
         image: /young-woman.webp
     _template: descriptionSection
+  - title: My Blog
+    image: /harmony.webp
+    blogBlocks:
+      - title: Five Ways to Stretch Outside of your Comfort Zone
+        date: 'August 23, 2024'
+    _template: blogSection
   - title: Online Appointments
     appointmentsBlocks:
       - title: Initial Consultation

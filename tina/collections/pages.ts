@@ -5,6 +5,7 @@ import {
   AppointmentsSection,
   QuoteSection,
   TestimonialsSection,
+  BlogSection,
   ColumnSection,
 } from "../templates/page-sections";
 
@@ -34,6 +35,7 @@ export const Pages: Collection = {
         AppointmentsSection,
         QuoteSection,
         TestimonialsSection,
+        BlogSection,
         ColumnSection,
       ],
     },

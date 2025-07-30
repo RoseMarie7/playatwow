@@ -5,6 +5,7 @@ import DescriptionSection from "../../tina/components/DescriptionSection";
 import AppointmentsSection from "../../tina/components/AppointmentsSection";
 import QuoteSection from "../../tina/components/QuoteSection";
 import TestimonialsSection from "../../tina/components/TestimonialsSection";
+import BlogSection from "../../tina/components/BlogSection";
 import ColumnSection from "../../tina/components/ColumnSection";
 
 export default function Page(props: {
@@ -32,6 +33,9 @@ export default function Page(props: {
           }
           case "HomePageSectionsTestimonialsSection": {
             return <TestimonialsSection key={i} {...section} />;
+          }
+          case "HomePageSectionsBlogSection": {
+            return <BlogSection key={i} {...section} />;
           }
           case "HomePageSectionsColumnSection": {
             return <ColumnSection key={i} {...section} />;

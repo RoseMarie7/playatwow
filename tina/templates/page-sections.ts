@@ -204,6 +204,51 @@ export const TestimonialsSection: Template = {
   ],
 };
 
+export const BlogSection: Template = {
+  name: "blogSection",
+  label: "Blog Section",
+  ui: {
+    itemProps: (item) => {
+      return { label: item?.title };
+    },
+  },
+  fields: [
+    {
+      name: "title",
+      label: "Title",
+      type: "string",
+    },
+    {
+      name: "image",
+      label: "Image",
+      type: "image",
+    },
+    {
+      name: "blogBlocks",
+      label: "Blog Blocks",
+      type: "object",
+      list: true,
+      ui: {
+        itemProps: (item) => {
+          return { label: item?.title };
+        },
+      },
+      fields: [
+        {
+          name: "title",
+          label: "Title",
+          type: "string",
+        },
+        {
+          name: "date",
+          label: "Date",
+          type: "string",
+        },
+      ],
+    },
+  ],
+};
+
 export const ColumnSection: Template = {
   name: "columnSection",
   label: "Column Section",
