@@ -1,0 +1,27 @@
+---
+import { getCollection } from "astro:content";
+import { client } from "@tina/__generated__/client";
+import Layout from '@layouts/Layout.astro';
+import Post from '@components/Post.tsx';
+
+
+export async function getStaticPaths() {
+	const post = await getCollection("posts");
+	return post.map((p) => ({
+		params: { slug: p.id },
+		props: {
+			getTinaProps: async () =>
+				client.queries.posts({
+					relativePath: p.data.tinaInfo.relativePath,
+				}),
+		},
+	}));
+}
+
+const { getTinaProps } = Astro.props;
+const data = await getTinaProps();
+---
+
+<Layout>
+	<Post {...data} client:tina />
+</Layout>
