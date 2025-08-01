@@ -20,8 +20,9 @@ export async function getStaticPaths() {
 
 const { getTinaProps } = Astro.props;
 const data = await getTinaProps();
+const posts = await getCollection('posts');
 ---
 
 <Layout>
-	<Page {...data} client:tina />
+	<Page {...data} client:tina posts={posts} />
 </Layout>

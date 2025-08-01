@@ -4,10 +4,20 @@ import type {
 } from "@tina/__generated__/types";
 import Section from "./Section";
 import { tinaField } from "tinacms/dist/react";
+import type { InferEntrySchema, RenderedContent } from "astro:content";
+
+type Post = {
+  id: string;
+  body?: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">;
+  rendered?: RenderedContent;
+  filePath?: string;
+};
 
 type BlogSectionProps =
-  | PagesPageSectionsBlogSection
-  | HomePageSectionsBlogSection;
+  | (PagesPageSectionsBlogSection & { posts: Post[] })
+  | (HomePageSectionsBlogSection & { posts: Post[] });
 
 export default function TestimonialsSection(props: BlogSectionProps) {
   return (
@@ -22,34 +32,31 @@ export default function TestimonialsSection(props: BlogSectionProps) {
       >
         {props.title}
       </h2>
-      <div className="flex gap-4 items-center justify-center">
-        <div className="carousel w-full">
-          {props.blogBlocks?.map((block, i) => {
-            return (
-              <div
-                className="carousel-item card rounded-none p-2 md:p-4 w-full md:w-1/2 lg:w-1/3 max-w-[200px] mx-auto bg-white shadow-2xl"
-                key={i}
-              >
-                <div className="card-body justify-between items-center text-center min-h-[300px]">
-                  <p
-                    className="flex-none"
-                    data-tina-field={tinaField(block, "date")}
-                  >
-                    {block?.date}
-                  </p>
-                  <h2
-                    className="card-title"
-                    data-tina-field={tinaField(block, "title")}
-                  >
-                    {block?.title}
-                  </h2>
-                  <a>Continue Reading</a>
+      {props.posts.length > 0 && (
+        <div className="flex gap-4 items-center justify-center">
+          <div className="carousel w-full">
+            {props.posts.map((post, i) => {
+              return (
+                <div
+                  className="carousel-item card rounded-none p-2 md:p-4 w-full md:w-1/2 lg:w-1/3 max-w-[200px] mx-auto bg-white shadow-2xl"
+                  key={i}
+                >
+                  <div className="card-body justify-between items-center text-center min-h-[300px]">
+                    <p className="flex-none">{post.data.date}</p>
+                    <h2 className="card-title">{post.data.title}</h2>
+                    <a
+                      href={`/posts/${post.id}`}
+                      className="hover:underline hover:text-[#c49800]"
+                    >
+                      Continue Reading
+                    </a>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
-      </div>
+      )}
     </Section>
   );
 }

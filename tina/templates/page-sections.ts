@@ -223,29 +223,6 @@ export const BlogSection: Template = {
       label: "Image",
       type: "image",
     },
-    {
-      name: "blogBlocks",
-      label: "Blog Blocks",
-      type: "object",
-      list: true,
-      ui: {
-        itemProps: (item) => {
-          return { label: item?.title };
-        },
-      },
-      fields: [
-        {
-          name: "title",
-          label: "Title",
-          type: "string",
-        },
-        {
-          name: "date",
-          label: "Date",
-          type: "string",
-        },
-      ],
-    },
   ],
 };
 

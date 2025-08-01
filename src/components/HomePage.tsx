@@ -12,6 +12,7 @@ export default function Page(props: {
   data: HomeQuery;
   variables: HomeQueryVariables;
   query: string;
+  posts: any;
 }) {
   const { data } = useTina(props);
 
@@ -35,7 +36,7 @@ export default function Page(props: {
             return <TestimonialsSection key={i} {...section} />;
           }
           case "HomePageSectionsBlogSection": {
-            return <BlogSection key={i} {...section} />;
+            return <BlogSection key={i} {...section} posts={props.posts} />;
           }
           case "HomePageSectionsColumnSection": {
             return <ColumnSection key={i} {...section} />;
