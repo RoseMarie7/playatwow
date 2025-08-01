@@ -6,7 +6,7 @@ pageSections:
       - title: Free Discovery Call
         content: >
           Book a free Discovery Call to talk about your goals and how working
-          together can help achieve them. 
+          together can help achieve them.
 
 
           The Discovery Call offers a safe space for you to:
@@ -17,7 +17,7 @@ pageSections:
           * ask questions about working with a certified coach and the coaching
           process
 
-          *  be clear on why you want to work with a coach
+          * be clear on why you want to work with a coach
 
           * understand how coaching can help you
 
@@ -37,8 +37,7 @@ pageSections:
       - title: Unleash Your Potential 10 Session Package
         content: >
           * One of the most powerful questions in life we can ask ourselves is
-          ‘Who am I?’  The only person who can best answer this question is
-          you. 
+          ‘Who am I?’  The only person who can best answer this question is you.
 
           * This transformational coaching program has been designed so you can
           gain better insight & awareness to who you truly are. What are your
@@ -46,7 +45,7 @@ pageSections:
 
 
           Are you ready to have fun, discover your best self and tap into your
-          full potential for greater success and well-being?  
+          full potential for greater success and well-being?
 
 
           This package includes
@@ -54,11 +53,11 @@ pageSections:
 
           * 10 x 60 min coaching sessions (online or in person pending location)
 
-          * support via text/email between sessions 
+          * support via text/email between sessions
 
           * tailored strategies and tools to help you reach your specific goals
 
-          * optional resources to further self-growth 
+          * optional resources to further self-growth
 
           * 4 post-program touchpoints after program ends
         image: /sunset-y.webp
@@ -83,16 +82,16 @@ pageSections:
           Interactive Group discussions, Individual Support
 
           3. Renew You for teams: 1 day customized workshop
-        image: /logo_round.png
+        image: /logo.webp
       - title: Connect to Purpose Workshop
         content: >
           Do you want to find more meaning in your life and in your work?  Do
           you aspire to live a purpose driven life? In this workshop you will
           learn the key to unlocking purpose, the simple truths about what
-          motivates us and how you can craft your own individual purpose. 
+          motivates us and how you can craft your own individual purpose.
 
 
-          Half-day workshop includes:   
+          Half-day workshop includes:
 
 
           * Character Strength Assessment
