@@ -12,7 +12,13 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
 
-  integrations: [react(), tinaDirective(), swup({ globalInstance: true })],
+  integrations: [
+    react(),
+    tinaDirective(),
+    swup({
+      globalInstance: true,
+    }),
+  ],
   server: {
     open: "/",
   },

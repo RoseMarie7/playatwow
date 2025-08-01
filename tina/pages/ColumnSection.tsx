@@ -23,9 +23,16 @@ const components = {
   },
   li: (props: any) => {
     return (
-      <li className="list-disc" {...props}>
+      <li className="font-josefin-sans text-start list-disc" {...props}>
         {props.children}
       </li>
+    );
+  },
+  ul: (props: any) => {
+    return (
+      <ul className="grid font-josefin-sans justify-center mb-4" {...props}>
+        {props.children}
+      </ul>
     );
   },
 };
@@ -62,16 +69,16 @@ export default function ColumnSection(props: ColumnSectionProps) {
                       data-tina-field={tinaField(block, "image")}
                       src={block?.image}
                       alt={props.title}
-                      width={160}
-                      height={90}
+                      width={288}
+                      height={162}
                       loading="lazy"
                       decoding="async"
                       className="mask mask-square"
                     />
                   </figure>
                 )}
-                <div className="card-body items-center text-center">
-                  <h2 data-tina-field={tinaField(block, "title")}>
+                <div className="card-body max-w-[40ch] self-center items-center text-center">
+                  <h2 className="font-josefin-sans capitalize text-2xl font-bold">
                     {block?.title}
                   </h2>
                   <div

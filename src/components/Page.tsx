@@ -3,13 +3,13 @@ import type {
   PagesQueryVariables,
 } from "@tina/__generated__/types";
 import { useTina } from "tinacms/dist/react";
-import HeroSection from "../../tina/components/HeroSection";
-import DescriptionSection from "../../tina/components/DescriptionSection";
-import AppointmentsSection from "../../tina/components/AppointmentsSection";
-import QuoteSection from "../../tina/components/QuoteSection";
-import TestimonialsSection from "../../tina/components/TestimonialsSection";
-import BlogSection from "../../tina/components/BlogSection";
-import ColumnSection from "../../tina/components/ColumnSection";
+import HeroSection from "../../tina/pages/HeroSection";
+import DescriptionSection from "../../tina/pages/DescriptionSection";
+import AppointmentsSection from "../../tina/pages/AppointmentsSection";
+import QuoteSection from "../../tina/pages/QuoteSection";
+import TestimonialsSection from "../../tina/pages/TestimonialsSection";
+import BlogSection from "../../tina/pages/BlogSection";
+import ColumnSection from "../../tina/pages/ColumnSection";
 
 export default function Page(props: {
   data: PagesQuery;

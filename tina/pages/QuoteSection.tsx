@@ -24,6 +24,13 @@ const components = {
       </p>
     );
   },
+  li: (props: any) => {
+    return (
+      <li className="list-disc" {...props}>
+        {props.children}
+      </li>
+    );
+  },
 };
 
 type QuoteSectionProps =
