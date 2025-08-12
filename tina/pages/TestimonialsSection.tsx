@@ -37,7 +37,7 @@ export default function TestimonialsSection(props: TestimonialsSectionProps) {
         {props.title}
       </h1>
       <div className="flex gap-4 items-center justify-center">
-        <div className="carousel w-full">
+        <div className="carousel overflow-y-hidden w-full">
           {props.testimonialsBlocks?.map((block, i) => {
             return (
               <div
