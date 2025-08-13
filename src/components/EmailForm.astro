@@ -1,43 +1,52 @@
 ---
 ---
 
-<div class="flex flex-col gap-4">
-  <div class="flex flex-col gap-2">
-    <label for="email" class="text-base-content text-sm font-bold">Email</label>
-    <input
-      type="email"
-      name="email"
-      id="email"
-      class="input input-bordered input-primary w-full"
-      placeholder="Your email"
-    />
+<section class="max-w-7xl px-4 sm:px-8 md:px-16 py-8 space-y-8 mx-auto h-full">
+  <h1 class="font-righteous uppercase text-5xl font-bold text-[#c49800] text-center">Contact</h1>
+  <div class="flex flex-col gap-16 justify-around items-center sm:flex-row">
+    <img class="hidden sm:block mask mask-squircle shrink-0" src="/rose-marie.webp" alt="Rose Marie" width="300" height="300" loading="lazy" decoding="async">
+    <form class="flex flex-col gap-2 w-full max-w-[500px]" id="contact-form">
+        <label data-theme="light" class="input floating-label w-full max-w-[500px]">
+          <span>Name</span>
+          <input type="text" id="name" name="name" autocomplete="name" placeholder="Name" required>
+        </label>
+        <label data-theme="light" class="input floating-label w-full max-w-[500px]">
+          <span>Email</span>
+          <input type="email" id="email" name="email" autocomplete="email" placeholder="Email" required>
+        </label>
+        <label data-theme="light" class="input floating-label w-full max-w-[500px]">
+          <span>Subject</span>
+          <input type="text" id="title" name="title" placeholder="Subject" required>
+        </label>
+        <label data-theme="light" class="floating-label w-full max-w-[500px]">
+          <span>Message</span>
+          <textarea class="textarea w-full max-w-[500px]" id="message" name="message" placeholder="Message" required></textarea>
+        </label>
+        <input data-theme="light" class="btn btn-block btn-primary max-w-[200px] self-center" type="submit" value="Send">
+    </form>
   </div>
-  <div class="flex flex-col gap-2">
-    <label for="name" class="text-base-content text-sm font-bold">Name</label>
-    <input
-      type="text"
-      name="name"
-      id="name"
-      class="input input-bordered input-primary w-full"
-      placeholder="Your name"
-    />
-  </div>
-  <div class="flex flex-col gap-2">
-    <label for="message" class="text-base-content text-sm font-bold">
-      Message
-    </label>
-    <textarea
-      name="message"
-      id="message"
-      class="textarea textarea-bordered h-24 w-full"
-      placeholder="Your message"
-    ></textarea>
-  </div>
-  <button
-    type="submit"
-    class="btn btn-primary w-full"
-    style="background-color: #c49800"
-  >
-    Send
-  </button>
-</div>
+</section>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function() {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init({
+          publicKey: "YOUR_PUBLIC_KEY",
+        });
+    })();
+</script>
+<script type="text/javascript">
+    window.onload = function() {
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // these IDs from the previous steps
+            emailjs.sendForm('contact_service', 'contact_form', this)
+                .then(() => {
+                    console.log('SUCCESS!');
+                }, (error) => {
+                    console.log('FAILED...', error);
+                });
+        });
+    }
+</script>
