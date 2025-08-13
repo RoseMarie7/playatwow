@@ -1,6 +1,5 @@
 import { defineCollection, z } from "astro:content";
 import { client } from "../tina/__generated__/client"; // Import Tina client
-import { title } from "process";
 
 const pages = defineCollection({
   loader: async () => {
