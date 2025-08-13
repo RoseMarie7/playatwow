@@ -8,6 +8,7 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://www.playatwow.com",
   vite: {
     plugins: [tailwindcss()],
   },
