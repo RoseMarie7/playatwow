@@ -53,35 +53,6 @@ pageSections:
           * Certified Facilitation
         image: /young-woman.webp
     _template: descriptionSection
-  - title: My Blog
-    image: /harmony.webp
-    _template: blogSection
-  - title: Online Appointments
-    appointmentsBlocks:
-      - title: Initial Consultation
-        duration: 30 mins
-        cost: Free
-        content: >
-          Initial call to meet and talk about your goals and how we can work
-          together to achieve them. You can decide whether you want to move
-          forward with any of our services after the call.
-        image: /young-woman.webp
-      - title: Discovery Call
-        duration: 1 hr 30 mins
-        cost: Free
-        content: >
-          Experience a live coaching session free. We recommend Initial Consult
-          first. Short exercises will be provided. At the end of the session you
-          will understand how coaching can help you and determine if it is a
-          right fit for you.
-        image: /testi-five.webp
-    _template: appointmentsSection
-  - author: Ralph Waldo Emerson
-    quote: >
-      "The only person you are destined to become is the person you decide to
-      be."
-    image: /woman-pointing.webp
-    _template: quoteSection
   - title: What They Say
     testimonialsBlocks:
       - title: Career Professional
@@ -118,5 +89,34 @@ pageSections:
           work, individually, as a team and as an organization.
         image: /testi-five.webp
     _template: testimonialsSection
+  - title: My Blog
+    image: /harmony.webp
+    _template: blogSection
+  - title: Online Appointments
+    appointmentsBlocks:
+      - title: Initial Consultation
+        duration: 30 mins
+        cost: Free
+        content: >
+          Initial call to meet and talk about your goals and how we can work
+          together to achieve them. You can decide whether you want to move
+          forward with any of our services after the call.
+        image: /young-woman.webp
+      - title: Discovery Call
+        duration: 1 hr 30 mins
+        cost: Free
+        content: >
+          Experience a live coaching session free. We recommend Initial Consult
+          first. Short exercises will be provided. At the end of the session you
+          will understand how coaching can help you and determine if it is a
+          right fit for you.
+        image: /testi-five.webp
+    _template: appointmentsSection
+  - author: Ralph Waldo Emerson
+    quote: >
+      "The only person you are destined to become is the person you decide to
+      be."
+    image: /woman-pointing.webp
+    _template: quoteSection
 ---
 
