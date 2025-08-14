@@ -92,7 +92,7 @@ pageSections:
   - title: My Blog
     image: /harmony.webp
     _template: blogSection
-  - title: Online Appointments
+  - title: Contact for your free session
     appointmentsBlocks:
       - title: Initial Consultation
         duration: 30 mins
