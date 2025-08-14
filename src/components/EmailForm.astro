@@ -33,6 +33,10 @@
         // https://dashboard.emailjs.com/admin/account
         emailjs.init({
           publicKey: "P99qXE2fWdGv6qKle",
+          limitRate: {
+            // Allow 1 request per 10s
+            throttle: 10000,
+          },
         });
     })();
 </script>
