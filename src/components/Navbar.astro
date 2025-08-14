@@ -69,7 +69,7 @@ const { pathname } = Astro.url;
         drawerToggle.checked = false;
       }
       const previousPage = visit.from.url
-      const previousNavigation = document.querySelectorAll(`li a[href="${previousPage}"]`)
+      const previousNavigation = document.querySelectorAll(`li a[href="${previousPage}/"]`)
       if (previousNavigation) {
         previousNavigation.forEach(navigation => navigation.classList.remove('underline'))
         previousNavigation.forEach(navigation => navigation.classList.add('no-underline'))
