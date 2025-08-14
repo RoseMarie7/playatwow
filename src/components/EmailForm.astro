@@ -29,60 +29,29 @@
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script type="text/javascript">
-
-function initEmailJS() {
-  if (!document.getElementById('contact-form')) return; // Not on contact page
-  if (!window.__emailjsInitDone) { // Prevent double init
-    emailjs.init({
-      publicKey: "P99qXE2fWdGv6qKle",
-      limitRate: { throttle: 10000 },
-    });
-    window.__emailjsInitDone = true;
-    console.log('EmailJS initialized');
-  }
-}
-
-function submitForm() {
-  const form = document.getElementById('contact-form');
-  if (!form) return; // Not on contact page
-  if (form.dataset.bound === "1") return; // Prevent re-binding
-  form.dataset.bound = "1";
-
-  form.addEventListener('submit', function(event) {
-    event.preventDefault();
-    emailjs.sendForm('contact_service', 'contact_form', this)
-      .then(() => console.log('SUCCESS!'))
-      .catch((error) => console.log('FAILED...', error));
-  });
-}
-
-function setupContactForm() {
-  initEmailJS();
-  submitForm();
-}
-
-function setup() {
-  swup.hooks.on('visit:end', () => {
-    const currentPath = location.pathname.replace(/\/$/, "");
-    if (currentPath === '/contact') {
-      setupContactForm();
+    (function() {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init({
+          publicKey: "P99qXE2fWdGv6qKle",
+          limitRate: {
+            // Allow 1 request per 10s
+            throttle: 10000,
+          },
+        });
+        console.log('EmailJS initialized');
+    })();
+</script>
+<script type="text/javascript">
+    window.onload = function() {
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // these IDs from the previous steps
+            emailjs.sendForm('contact_service', 'contact_form', this)
+                .then(() => {
+                    console.log('SUCCESS!');
+                }, (error) => {
+                    console.log('FAILED...', error);
+                });
+        });
     }
-  });
-}
-
-if ("swup" in window) {
-  setup();
-} else {
-  document.addEventListener('swup:enable', setup);
-}
-
-// Full refresh
-document.addEventListener('DOMContentLoaded', () => {
-  const currentPath = location.pathname.replace(/\/$/, "");
-  if (currentPath === '/contact') {
-    setupContactForm();
-  }
-});
-
-
 </script>
