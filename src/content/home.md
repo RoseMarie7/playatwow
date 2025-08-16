@@ -9,8 +9,8 @@ heroSection:
 pageSections:
   - title: Play at WOW
     content: >
-      Where you can explore, grow, and thrive through change. Where you can
-      embrace play, purpose , and personal power.            
+      Where you explore, grow, and thrive through change. Where you embrace
+      play, purpose , and personal power.            
 
        WHERE WONDER MEETS YOU!
     image: /mountaintop.webp
