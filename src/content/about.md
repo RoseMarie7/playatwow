@@ -55,7 +55,7 @@ pageSections:
           Play at WOW isn’t just a coaching  company, it’s a way of being.
           “Where Wonder Meets YOU” is the invitation I extend to every woman
           ready to explore, grow, and thrive through change.
-        image: /rose-marie-two.webp
+        image: /rose-marie.webp
       - title: My Mission & Approach
         content: >
           My mission as a Career and Life Coach is to empower and inspire my
