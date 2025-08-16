@@ -18,13 +18,13 @@ pageSections:
     descriptionBlocks:
       - title: 'Hi, I''m RoseMarie'
         content: >
-          I'm happy you're here !  I invite you to step into a safe space that's
-          both magical and empowering. By visiting my site, you've already taken
-          the first step on a transformative journey - a journey that's about
-          you. A journey to discover your joy, your fulfillment, and your
-          ability to thrive no matter what life throws your way.  Thriving
-          through change isn't a flawless journey, it’s a messy, beautiful one.
-          I know because I've experienced it.
+          I invite you to step into a safe space that's both magical and
+          empowering. By visiting my site, you've already taken the first step
+          on a transformative journey - a journey that's about you. A journey to
+          discover your joy, your fulfillment, and your ability to thrive no
+          matter what life throws your way.  Thriving through change isn't a
+          flawless journey, it’s a messy, beautiful one. I know because I've
+          experienced it.
 
 
           I'm a certified professional career and life coach. Coaching is not
