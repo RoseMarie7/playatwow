@@ -82,7 +82,7 @@ pageSections:
           Interactive Group discussions, Individual Support
 
           3. Renew You for teams: 1 day customized workshop
-        image: /logo.webp
+        image: /harmony.webp
       - title: Connect to Purpose Workshop
         content: >
           Do you want to find more meaning in your life and in your work?  Do
