@@ -11,7 +11,7 @@ pageSections:
     content: |
       ## Where Wonder Meets You
 
-      A place where women can explore, grow, and thrive through change.
+      A place where you can explore, grow, and thrive through change.
     image: /hero.webp
     _template: heroSection
   - title: Play at WOW Career & Life Coaching
