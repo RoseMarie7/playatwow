@@ -13,7 +13,7 @@ pageSections:
 
       Where you embrace play, purpose , and personal power.   
 
-                WHERE WONDER MEETS YOU!
+      WHERE WONDER MEETS YOU!
     image: /sunset-y.webp
     _template: heroSection
   - title: Play at WOW Career & Life Coaching
