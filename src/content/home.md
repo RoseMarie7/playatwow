@@ -11,7 +11,7 @@ pageSections:
     content: |
       Where you explore, grow and thrive through change.
 
-      Where you embrace play, purpose , and personal power.   
+      Where you embrace play, purpose , and personal power.
 
       WHERE WONDER MEETS YOU!
     image: /sunset-y.webp
@@ -108,7 +108,7 @@ pageSections:
           first. Short exercises will be provided. At the end of the session you
           will understand how coaching can help you and determine if it is a
           right fit for you.
-        image: /testi-five.webp
+        image: /zen-desk.webp
     _template: appointmentsSection
   - title: My Blog
     image: /harmony.webp
