@@ -85,10 +85,10 @@ pageSections:
         image: /harmony.webp
       - title: Connect to Purpose Workshop
         content: >
-          Do you want to find more meaning in your life and in your work?  Do
-          you aspire to live a purpose driven life? In this workshop you will
-          learn the key to unlocking purpose, the simple truths about what
-          motivates us and how you can craft your own individual purpose.
+          Do you want to find more meaning in your life?  Do you aspire to live
+          a purpose driven life? In this workshop you will learn the key to
+          unlocking purpose, the simple truths about what motivates us and how
+          you can craft your own individual purpose.
 
 
           Half-day workshop includes:
