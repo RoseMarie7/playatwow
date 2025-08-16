@@ -52,7 +52,7 @@ pageSections:
 
           Today, I hold space for women navigating change. I guide them back to
           their truth, helping them embrace play, purpose, and personal power.
-          Play at WOW isn’t just a coaching  company, it’s a way of being. And
+          Play at WOW isn’t just a coaching  company, it’s a way of being.
           “Where Wonder Meets YOU” is the invitation I extend to every woman
           ready to explore, grow, and thrive through change.
         image: /rose-marie-two.webp
