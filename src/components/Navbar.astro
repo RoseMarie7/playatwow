@@ -11,13 +11,13 @@ const { pathname } = Astro.url;
   </div>
   <ul class="ml-auto hidden lg:flex">
     <li><a href="/" class={`${pathname === "/" ? "underline" : "no-underline"} btn btn-link text-black hover:text-[#c49800] normal-case text-lg`}>Home</a></li>
-    <li><a href="/about" class={`${pathname === "/about/" ? "underline" : "no-underline"} btn btn-link text-black hover:text-[#c49800] normal-case text-lg`}>About</a></li>
-    <li><a href="/core-beliefs" class={`${pathname === "/core-beliefs/" ? "underline" : "no-underline"} btn btn-link text-black hover:text-[#c49800] normal-case text-lg`}>Beliefs</a></li>
-    <li><a href="/services" class={`${pathname === "/services/" ? "underline" : "no-underline"} btn btn-link text-black hover:text-[#c49800] normal-case text-lg`}>Services</a></li>
-    <li><a href="/programs" class={`${pathname === "/programs/" ? "underline" : "no-underline"} btn btn-link text-black hover:text-[#c49800] normal-case text-lg`}>Programs</a></li>
-    <li><a href="/blog" class={`${pathname === "/blog/" ? "underline" : "no-underline"} btn btn-link text-black hover:text-[#c49800] normal-case text-lg`}>Blog</a></li>
-    <li><a href="/community" class={`${pathname === "/community/" ? "underline" : "no-underline"} btn btn-link text-black hover:text-[#c49800] normal-case text-lg`}>Community</a></li>
-    <li><a href="/contact" class={`${pathname === "/contact/" ? "underline" : "no-underline"} btn btn-link justify-start text-black hover:text-[#c49800] normal-case text-lg`}>Contact</a></li>
+    <li><a href="/about" class={`${pathname.replace(/\/$/, "") === "/about" ? "underline" : "no-underline"} btn btn-link text-black hover:text-[#c49800] normal-case text-lg`}>About</a></li>
+    <li><a href="/core-beliefs" class={`${pathname.replace(/\/$/, "") === "/core-beliefs" ? "underline" : "no-underline"} btn btn-link text-black hover:text-[#c49800] normal-case text-lg`}>Beliefs</a></li>
+    <li><a href="/services" class={`${pathname.replace(/\/$/, "") === "/services" ? "underline" : "no-underline"} btn btn-link text-black hover:text-[#c49800] normal-case text-lg`}>Services</a></li>
+    <li><a href="/programs" class={`${pathname.replace(/\/$/, "") === "/programs" ? "underline" : "no-underline"} btn btn-link text-black hover:text-[#c49800] normal-case text-lg`}>Programs</a></li>
+    <li><a href="/blog" class={`${pathname.replace(/\/$/, "") === "/blog" ? "underline" : "no-underline"} btn btn-link text-black hover:text-[#c49800] normal-case text-lg`}>Blog</a></li>
+    <li><a href="/community" class={`${pathname.replace(/\/$/, "") === "/community" ? "underline" : "no-underline"} btn btn-link text-black hover:text-[#c49800] normal-case text-lg`}>Community</a></li>
+    <li><a href="/contact" class={`${pathname.replace(/\/$/, "") === "/contact" ? "underline" : "no-underline"} btn btn-link justify-start text-black hover:text-[#c49800] normal-case text-lg`}>Contact</a></li>
   </ul>
   <!-- Mobile menu toggle -->
   <div class="drawer drawer-end lg:hidden">
@@ -45,13 +45,13 @@ const { pathname } = Astro.url;
       <ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
         <!-- Sidebar content here -->
         <li><a class={`${pathname === "/" ? "underline" : "no-underline"} btn btn-link justify-start text-black hover:text-[#c49800] normal-case text-lg`} href="/">Home</a></li>
-        <li><a class={`${pathname === "/about" ? "underline" : "no-underline"} btn btn-link justify-start text-black hover:text-[#c49800] normal-case text-lg`} href="/about/">About</a></li>
-        <li><a class={`${pathname === "/core-beliefs" ? "underline" : "no-underline"} btn btn-link justify-start text-black hover:text-[#c49800] normal-case text-lg`} href="/core-beliefs/">Beliefs</a></li>
-        <li><a class={`${pathname === "/services" ? "underline" : "no-underline"} btn btn-link justify-start text-black hover:text-[#c49800] normal-case text-lg`} href="/services/">Services</a></li>
-        <li><a class={`${pathname === "/programs" ? "underline" : "no-underline"} btn btn-link justify-start text-black hover:text-[#c49800] normal-case text-lg`} href="/programs/">Programs</a></li>
-        <li><a class={`${pathname === "/blog" ? "underline" : "no-underline"} btn btn-link justify-start text-black hover:text-[#c49800] normal-case text-lg`} href="/blog/">Blog</a></li>
-        <li><a class={`${pathname === "/community" ? "underline" : "no-underline"} btn btn-link justify-start text-black hover:text-[#c49800] normal-case text-lg`} href="/community/">Community</a></li>
-        <li><a class={`${pathname === "/contact" ? "underline" : "no-underline"} btn btn-link justify-start text-black hover:text-[#c49800] normal-case text-lg`} href="/contact/">Contact</a></li>
+        <li><a class={`${pathname.replace(/\/$/, "") === "/about" ? "underline" : "no-underline"} btn btn-link justify-start text-black hover:text-[#c49800] normal-case text-lg`} href="/about">About</a></li>
+        <li><a class={`${pathname.replace(/\/$/, "") === "/core-beliefs" ? "underline" : "no-underline"} btn btn-link justify-start text-black hover:text-[#c49800] normal-case text-lg`} href="/core-beliefs">Beliefs</a></li>
+        <li><a class={`${pathname.replace(/\/$/, "") === "/services" ? "underline" : "no-underline"} btn btn-link justify-start text-black hover:text-[#c49800] normal-case text-lg`} href="/services">Services</a></li>
+        <li><a class={`${pathname.replace(/\/$/, "") === "/programs" ? "underline" : "no-underline"} btn btn-link justify-start text-black hover:text-[#c49800] normal-case text-lg`} href="/programs">Programs</a></li>
+        <li><a class={`${pathname.replace(/\/$/, "") === "/blog" ? "underline" : "no-underline"} btn btn-link justify-start text-black hover:text-[#c49800] normal-case text-lg`} href="/blog">Blog</a></li>
+        <li><a class={`${pathname.replace(/\/$/, "") === "/community" ? "underline" : "no-underline"} btn btn-link justify-start text-black hover:text-[#c49800] normal-case text-lg`} href="/community">Community</a></li>
+        <li><a class={`${pathname.replace(/\/$/, "") === "/contact" ? "underline" : "no-underline"} btn btn-link justify-start text-black hover:text-[#c49800] normal-case text-lg`} href="/contact">Contact</a></li>
       </ul>
     </div>
   </div>
@@ -68,13 +68,13 @@ const { pathname } = Astro.url;
       if (drawerToggle && drawerToggle.checked) {
         drawerToggle.checked = false;
       }
-      const previousPage = visit.from.url
-      const previousNavigation = document.querySelectorAll(`li a[href="${previousPage}/"]`)
+      const previousPage = visit.from.url.replace(/\/$/, "") || "/"
+      const previousNavigation = document.querySelectorAll(`li a[href="${previousPage}"]`)
       if (previousNavigation) {
         previousNavigation.forEach(navigation => navigation.classList.remove('underline'))
         previousNavigation.forEach(navigation => navigation.classList.add('no-underline'))
       }
-      const currentPage = visit.to.url
+      const currentPage = visit.to.url.replace(/\/$/, "") || "/"
       const currentNavigation = document.querySelectorAll(`li a[href="${currentPage}"]`)
       if (currentNavigation) {
         currentNavigation.forEach(navigation => navigation.classList.remove('no-underline'))
