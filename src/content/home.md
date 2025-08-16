@@ -36,16 +36,16 @@ pageSections:
           are tailored to enrich every aspect of your well-being.
 
 
-          I embrace the philosophy of Life Harmony—viewing work as an integral,
-          harmonious part of life, rather than something separate. Together,
-          we'll craft a symphony of all life’s elements that resonates with what
-          I call Play at WOW.
+          I embrace Life Harmony, viewing work as an integral, harmonious part
+          of life, rather than something separate. Together, we'll craft a
+          symphony of all life’s elements that resonates with what I call Play
+          at WOW.
 
 
           With over 15 years as a proud member of the International Coaching
           Federation, I bring experience, dedication, and heart to every
           session. I invite you to begin your empowering journey. Let's work
-          together to achieve your goals and thrive!
+          together to achieve your goals!
         image: /rose-marie.webp
       - title: How I Help
         content: |
