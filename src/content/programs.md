@@ -34,7 +34,7 @@ pageSections:
 
           * short exercises to complete prior to the appointment
         image: /zen-desk.webp
-      - title: Unleash Your Potential 10 Session Package
+      - title: Unleash Your Potential - 10 Session Package
         content: >
           * One of the most powerful questions in life we can ask ourselves is
           ‘Who am I?’  The only person who can best answer this question is you.
