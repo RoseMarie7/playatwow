@@ -8,10 +8,11 @@ heroSection:
   link: blah
 pageSections:
   - title: Play at WOW
-    content: |
-      ## Where Wonder Meets You
+    content: >
+      Where you can explore, grow, and thrive through change. Where you can
+      embrace play, purpose , and personal power.            
 
-      Where you can explore, grow, and thrive through change.
+       WHERE WONDER MEETS YOU!
     image: /hero.webp
     _template: heroSection
   - title: Play at WOW Career & Life Coaching
