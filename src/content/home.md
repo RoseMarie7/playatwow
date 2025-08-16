@@ -20,9 +20,8 @@ pageSections:
     descriptionBlocks:
       - title: 'Hi, I''m RoseMarie'
         content: >
-          I invite you to step into a safe space that's both magical and
-          empowering. By visiting my site, you've already taken the first step
-          on a transformative journey - a journey that's about you. A journey to
+          By visiting my site, you've already taken the first step on a
+          transformative journey - a journey that's about you. A journey to
           discover your joy, your fulfillment, and your ability to thrive no
           matter what life throws your way.  If you are looking to create
           positive change in your life, you have come to the right place.
@@ -45,7 +44,8 @@ pageSections:
 
           With over 15 years as a proud member of the International Coaching
           Federation, I bring experience, dedication, and heart to every
-          session. Let's work together to help you thrive!
+          session. I invite you to begin your empowering journey. Let's work
+          together to help you achieve your goals and thrive!
         image: /rose-marie.webp
       - title: How I Help
         content: |
