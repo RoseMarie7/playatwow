@@ -89,7 +89,7 @@ pageSections:
           work, individually, as a team and as an organization.
         image: /testi-five.webp
     _template: testimonialsSection
-  - title: Contact me for a free session today
+  - title: Start with a free session
     appointmentsBlocks:
       - title: Initial Consultation
         duration: 30 mins
