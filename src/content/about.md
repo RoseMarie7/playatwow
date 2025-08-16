@@ -1,7 +1,7 @@
 ---
 seoTitle: About
 pageSections:
-  - title: 'Coach RoseMarie '
+  - title: RoseMarie Nero
     columnAmount: 2
     columnBlocks:
       - title: My Story
