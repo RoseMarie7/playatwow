@@ -100,7 +100,7 @@ pageSections:
           Purpose
 
           * Participant Workbook
-        image: /living-with-purpose.webp
+        image: /testi-four.webp
     _template: descriptionSection
 ---
 
