@@ -89,10 +89,7 @@ pageSections:
           work, individually, as a team and as an organization.
         image: /testi-five.webp
     _template: testimonialsSection
-  - title: My Blog
-    image: /harmony.webp
-    _template: blogSection
-  - title: Contact for your free session
+  - title: Contact me for a free session today
     appointmentsBlocks:
       - title: Initial Consultation
         duration: 30 mins
@@ -112,6 +109,9 @@ pageSections:
           right fit for you.
         image: /testi-five.webp
     _template: appointmentsSection
+  - title: My Blog
+    image: /harmony.webp
+    _template: blogSection
   - author: Ralph Waldo Emerson
     quote: >
       "The only person you are destined to become is the person you decide to
