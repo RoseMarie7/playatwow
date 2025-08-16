@@ -13,7 +13,7 @@ pageSections:
       embrace play, purpose , and personal power.            
 
        WHERE WONDER MEETS YOU!
-    image: /hero.webp
+    image: /mountaintop.webp
     _template: heroSection
   - title: Play at WOW Career & Life Coaching
     descriptionBlocks:
