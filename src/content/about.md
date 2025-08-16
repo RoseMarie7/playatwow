@@ -83,7 +83,7 @@ pageSections:
           At Play at WOW, I guide  individuals and teams to  embrace the journey
           with play, purpose, and personal power. My coaching programs  have
           supported clients across business, healthcare and education.
-        image: /table-group.webp
+        image: /approach.PNG
     _template: columnSection
 ---
 
