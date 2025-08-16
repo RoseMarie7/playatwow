@@ -62,7 +62,7 @@ pageSections:
           clients to live a life that is authentic, fulfilling, and aligned with
           their values and strengths.  I believe that everyone has the potential
           to create positive change in their lives, and I am here to support you
-          on your journey of personal growth and transformation.
+          on your journey of personal growth.
 
 
           At the heart of the Play at WOW approach is a holistic, creative, and
