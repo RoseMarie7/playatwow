@@ -9,8 +9,6 @@ heroSection:
 pageSections:
   - title: Play at WOW
     content: |
-      Where you explore, grow, and thrive through change. 
-
       Where you embrace play, purpose , and personal power.   
 
       WHERE WONDER MEETS YOU!
