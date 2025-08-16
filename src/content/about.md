@@ -1,14 +1,14 @@
 ---
 seoTitle: About
 pageSections:
-  - title: RoseMarie Nero - Chief Inspiration Officer
+  - title: 'Coach RoseMarie '
     columnAmount: 2
     columnBlocks:
       - title: My Story
         content: >
           I'm a certified professional coach and facilitator with a passion for
           helping people tap into their full potential - a passion shaped over
-          three decades of corporate experience.  
+          three decades of corporate experience.
 
 
           Throughout my career, I had the privilege of leading teams across
@@ -27,7 +27,7 @@ pageSections:
           While I have received professional recognition and awards along the
           way, my most rewarding role has always been being a mom to two amazing
           children. Years ago, during an interview for National Post Business
-          Magazine,, back when I was the Marketing Manager for a top beverage
+          Magazine, back when I was the Marketing Manager for a top beverage
           brand, the reporter surprised me. She was less interested in my
           product launch and more fascinated by how I was balancing a demanding 
           career with a three-year-old and one-year-old at home. Having given up
@@ -77,7 +77,7 @@ pageSections:
           it's the integrity, effort, and energy that you bring to your actions
           that make the difference. Success isn’t just about reaching the finish
           line; it’s about the journey, the lessons learned, and the positive
-          impact you make along the way.  
+          impact you make along the way.
 
 
           At Play at WOW, I guide  individuals and teams to  embrace the journey
