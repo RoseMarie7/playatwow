@@ -34,3 +34,12 @@
   --shadow-hero-section-md: inset 0 0 2rem 4rem #ffffff;
   --shadow-hero-section-lg: inset 0 0 3rem 6rem #ffffff;
 }
+
+@layer utilities {
+  .scrollbar-default {
+    scrollbar-width: auto !important;
+  }
+  .scrollbar-default::-webkit-scrollbar {
+    display: block !important;
+  }
+}
