@@ -58,75 +58,72 @@ const { pathname } = Astro.url;
 </nav>
 
 <script>
+  // EmailJS logic is here to integrate listeners with Swup
+  // The EmailJS object is retrieved from a CDN on the root layout
+  // https://dashboard.emailjs.com/admin/account
+  // @ts-ignore
+  let isSendingEmail = false;
+  const handleContactForm: EventListener = (event) => {
+    event.preventDefault();
+    if (isSendingEmail) {
+      return;
+    }
+    isSendingEmail = true;
+    // Get reference to submit button
+    const submitButton = (event.target as HTMLFormElement).querySelector<HTMLInputElement>('input[type="submit"]');
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.value = "Sending...";
+    }
+    // these IDs are set on EmailJS
+    // @ts-ignore
+    emailjs.sendForm('contact_service', 'contact_form', this, {
+    publicKey: "P99qXE2fWdGv6qKle",
+    limitRate: {
+      // Allow 1 request per 2s
+      throttle: 2000,
+    },
+  })
+      .then(() => {
+        console.log('SUCCESS!');
+        if (submitButton) {
+          submitButton.value = "Message Sent!";
+          submitButton.disabled = false;
+          submitButton.classList.remove('btn-primary');
+          submitButton.classList.add('btn-success');
+        }
+        // Reset after short delay
+        setTimeout(() => {
+          if (submitButton) {
+            submitButton.value = "Send";
+            submitButton.classList.remove('btn-success');
+            submitButton.classList.add('btn-primary');
+          }
+          isSendingEmail = false;
+        }, 2000);
+      }, (error: any) => {
+        console.log('FAILED...', error);
+        if (submitButton) {
+          submitButton.value = "Failed. Please try again.";
+          submitButton.disabled = false;
+          submitButton.classList.remove('btn-primary');
+          submitButton.classList.add('btn-error');
+        }
+        // Reset after short delay
+        setTimeout(() => {
+          if (submitButton) {
+            submitButton.value = "Send";
+            submitButton.classList.remove('btn-error');
+            submitButton.classList.add('btn-primary');
+          }
+          isSendingEmail = false;
+        }, 2000);
+      }
+    );
+  }
   // Controls which navigation item is underlined upon page change and emailjs setup
   // Details found at: https://github.com/swup/astro?tab=readme-ov-file#access-to-the-swup-instance
   const setup = () => {
-
-    // EmailJS logic is here to integrate listeners with Swup
-    // The EmailJS object is retrieved from a CDN on the root layout
-    // https://dashboard.emailjs.com/admin/account
-    // @ts-ignore
-      emailjs.init({
-        publicKey: "P99qXE2fWdGv6qKle",
-        limitRate: {
-          // Allow 1 request per 2s
-          throttle: 2000,
-        },
-      });
-
-    let isSendingEmail = false;
-    const handleContactForm: EventListener = (event) => {
-      event.preventDefault();
-      if (isSendingEmail) {
-        return;
-      }
-      isSendingEmail = true;
-      // Get reference to submit button
-      const submitButton = (event.target as HTMLFormElement).querySelector<HTMLInputElement>('input[type="submit"]');
-      if (submitButton) {
-        submitButton.disabled = true;
-        submitButton.value = "Sending...";
-      }
-      // these IDs are set on EmailJS
-      // @ts-ignore
-      emailjs.sendForm('contact_service', 'contact_form', this)
-        .then(() => {
-          console.log('SUCCESS!');
-          if (submitButton) {
-            submitButton.value = "Message Sent!";
-            submitButton.disabled = false;
-            submitButton.classList.remove('btn-primary');
-            submitButton.classList.add('btn-success');
-          }
-          // Reset after short delay
-          setTimeout(() => {
-            if (submitButton) {
-              submitButton.value = "Send";
-              submitButton.classList.remove('btn-success');
-              submitButton.classList.add('btn-primary');
-            }
-            isSendingEmail = false;
-          }, 2000);
-        }, (error: any) => {
-          console.log('FAILED...', error);
-          if (submitButton) {
-            submitButton.value = "Failed. Please try again.";
-            submitButton.disabled = false;
-            submitButton.classList.remove('btn-primary');
-            submitButton.classList.add('btn-error');
-          }
-          // Reset after short delay
-          setTimeout(() => {
-            if (submitButton) {
-              submitButton.value = "Send";
-              submitButton.classList.remove('btn-error');
-              submitButton.classList.add('btn-primary');
-            }
-            isSendingEmail = false;
-          }, 2000);
-        }
-      );
-    }
     // Add event listener to contact form on page load/reload
     if (window.location.pathname.replace(/\/$/, "") === "/contact") {
       document.getElementById('contact-form')?.addEventListener('submit', handleContactForm)
@@ -146,10 +143,6 @@ const { pathname } = Astro.url;
         previousNavigation.forEach(navigation => navigation.classList.remove('underline'))
         previousNavigation.forEach(navigation => navigation.classList.add('no-underline'))
       }
-      // Remove event listener from contact form on page change
-      if (previousPage === "/contact") {
-        document.getElementById('contact-form')?.removeEventListener('submit', handleContactForm)
-      }
       // Add underline to current page links
       const currentPage = visit.to.url.replace(/\/$/, "") || "/"
       const currentNavigation = document.querySelectorAll(`li a[href="${currentPage}"]`)
@@ -162,6 +155,8 @@ const { pathname } = Astro.url;
     swup.hooks.on('visit:end', (visit) => {
       const isContactPage = visit.to.url.replace(/\/$/, "") === "/contact"
       if (isContactPage) {
+        // Remove before adding to enssure there are no duplicate listeners
+        document.getElementById('contact-form')?.removeEventListener('submit', handleContactForm);
         document.getElementById('contact-form')?.addEventListener('submit', handleContactForm)
       }
     })
