@@ -121,49 +121,54 @@ const { pathname } = Astro.url;
       }
     );
   }
-  // Controls which navigation item is underlined upon page change and emailjs setup
-  // Details found at: https://github.com/swup/astro?tab=readme-ov-file#access-to-the-swup-instance
-  const setup = () => {
-    // Add event listener to contact form on page load/reload
-    if (window.location.pathname.replace(/\/$/, "") === "/contact") {
-      document.getElementById('contact-form')?.addEventListener('submit', handleContactForm)
-    }
-
-    const swup = (window as typeof window & { swup: import('swup').default }).swup;
-    swup.hooks.on('visit:start', (visit) => {
-      // Close the mobile drawer if it's open
-      const drawerToggle = document.querySelector<HTMLInputElement>('#my-drawer');
-      if (drawerToggle && drawerToggle.checked) {
-        drawerToggle.checked = false;
-      }
-      // Remove underline from previous page links
-      const previousPage = visit.from.url.replace(/\/$/, "") || "/"
-      const previousNavigation = document.querySelectorAll(`li a[href="${previousPage}"]`)
-      if (previousNavigation) {
-        previousNavigation.forEach(navigation => navigation.classList.remove('underline'))
-        previousNavigation.forEach(navigation => navigation.classList.add('no-underline'))
-      }
-      // Add underline to current page links
-      const currentPage = visit.to.url.replace(/\/$/, "") || "/"
-      const currentNavigation = document.querySelectorAll(`li a[href="${currentPage}"]`)
-      if (currentNavigation) {
-        currentNavigation.forEach(navigation => navigation.classList.remove('no-underline'))
-        currentNavigation.forEach(navigation => navigation.classList.add('underline'))
-      }
-    })
-    // Add event listener to contact form on page change
-    swup.hooks.on('visit:end', (visit) => {
-      const isContactPage = visit.to.url.replace(/\/$/, "") === "/contact"
-      if (isContactPage) {
-        // Remove before adding to enssure there are no duplicate listeners
-        document.getElementById('contact-form')?.removeEventListener('submit', handleContactForm);
+  // Ensure that Swup does not trigger setup more than once
+  if (!(window as any)._contactFormInitialized) {
+    (window as any)._contactFormInitialized = true;
+    // Controls which navigation item is underlined upon page change and emailjs setup
+    // Details found at: https://github.com/swup/astro?tab=readme-ov-file#access-to-the-swup-instance
+    const setup = () => {
+      // Add event listener to contact form on page load/reload
+      if (window.location.pathname.replace(/\/$/, "") === "/contact") {
         document.getElementById('contact-form')?.addEventListener('submit', handleContactForm)
       }
-    })
-  }
-  if ("swup" in window) {
-    setup()
-  } else {
-    document.addEventListener('swup:enable', setup)
+
+      const swup = (window as typeof window & { swup: import('swup').default }).swup;
+      swup.hooks.on('visit:start', (visit) => {
+        // Close the mobile drawer if it's open
+        const drawerToggle = document.querySelector<HTMLInputElement>('#my-drawer');
+        if (drawerToggle && drawerToggle.checked) {
+          drawerToggle.checked = false;
+        }
+        // Remove underline from previous page links
+        const previousPage = visit.from.url.replace(/\/$/, "") || "/"
+        const previousNavigation = document.querySelectorAll(`li a[href="${previousPage}"]`)
+        if (previousNavigation) {
+          previousNavigation.forEach(navigation => navigation.classList.remove('underline'))
+          previousNavigation.forEach(navigation => navigation.classList.add('no-underline'))
+        }
+        // Add underline to current page links
+        const currentPage = visit.to.url.replace(/\/$/, "") || "/"
+        const currentNavigation = document.querySelectorAll(`li a[href="${currentPage}"]`)
+        if (currentNavigation) {
+          currentNavigation.forEach(navigation => navigation.classList.remove('no-underline'))
+          currentNavigation.forEach(navigation => navigation.classList.add('underline'))
+        }
+      })
+      // Add event listener to contact form on page change
+      swup.hooks.on('visit:end', (visit) => {
+        const isContactPage = visit.to.url.replace(/\/$/, "") === "/contact"
+        if (isContactPage) {
+          // Remove before adding to enssure there are no duplicate listeners
+          document.getElementById('contact-form')?.removeEventListener('submit', handleContactForm);
+          document.getElementById('contact-form')?.addEventListener('submit', handleContactForm)
+        }
+      })
+      console.log('setup complete')
+    }
+    if ("swup" in window) {
+      setup()
+    } else {
+      document.addEventListener('swup:enable', setup)
+    }
   }
 </script>
