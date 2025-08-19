@@ -77,7 +77,7 @@ const { pathname } = Astro.url;
     }
     // these IDs are set on EmailJS
     // @ts-ignore
-    emailjs.sendForm('contact_service', 'contact_form', this, {
+    emailjs.sendForm('contact_service', 'contact_form', event.target as HTMLFormElement, {
     publicKey: "P99qXE2fWdGv6qKle",
     limitRate: {
       // Allow 1 request per 2s
@@ -163,7 +163,6 @@ const { pathname } = Astro.url;
           document.getElementById('contact-form')?.addEventListener('submit', handleContactForm)
         }
       })
-      console.log('setup complete')
     }
     if ("swup" in window) {
       setup()
