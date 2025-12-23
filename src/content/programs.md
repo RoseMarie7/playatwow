@@ -91,7 +91,7 @@ pageSections:
           you can craft your own individual purpose.
 
 
-          Half-day workshop includes:
+          One day workshop includes:
 
 
           * Character Strength Assessment
