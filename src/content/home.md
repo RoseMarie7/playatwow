@@ -9,12 +9,9 @@ heroSection:
 pageSections:
   - title: Play at WOW
     content: |
-      Where you explore, grow and thrive through change.
 
-      Where you embrace play, purpose , and personal power.
-
-      WHERE WONDER MEETS YOU!
-    image: /sunset-y.webp
+      Are you ready to connect to PLAY, PURPOSE , and your PERSONAL POWER?
+    image: /hero.webp
     _template: heroSection
   - title: Play at WOW Career & Life Coaching
     descriptionBlocks:
