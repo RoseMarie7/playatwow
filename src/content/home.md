@@ -10,8 +10,10 @@ pageSections:
   - title: Play at WOW
     content: |
 
-      Are you ready to connect to PLAY, PURPOSE , and your PERSONAL POWER?
-    image: /hero.webp
+      Are you ready to connect to 
+
+      PLAY, PURPOSE , PERSONAL POWER?
+    image: /beach.webp
     _template: heroSection
   - title: Play at WOW Career & Life Coaching
     descriptionBlocks:
