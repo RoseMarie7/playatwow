@@ -9,8 +9,7 @@ heroSection:
 pageSections:
   - title: Play at WOW
     content: |
-
-      Are you ready to connect to 
+      Are you ready to connect to
 
       PLAY, PURPOSE , PERSONAL POWER?
     image: /beach.webp
@@ -19,20 +18,23 @@ pageSections:
     descriptionBlocks:
       - title: 'Hi, I''m RoseMarie'
         content: >
-          By visiting my site, you've already taken the first step on a
-          transformative journey - a journey that's about you. A journey to
-          discover your joy, your fulfillment, and your ability to thrive no
-          matter what life throws your way.  If you are looking to create
-          positive change in your life, you have come to the right place.
+          Welcome to my site!
 
 
           I'm a certified professional career and life coach. Coaching is not
           just my profession, it's my passion.  I believe every one of us has
-          the power to live authentically, with confidence, wonder, and joy.  I
-          am here to help you tap into that power.  Whether you're navigating
-          your next career move, seeking personal fulfillment, or reimagining
-          retirement, I'm here as your partner and guide. My coaching programs
-          are tailored to enrich every aspect of your well-being.
+          the power to live authentically, with confidence, and joy.  I am here
+          to help you tap into that power.  Whether you're navigating your next
+          career move, seeking personal fulfillment, or reimagining retirement,
+          I'm here as your partner and guide. My coaching programs are tailored
+          to enrich every aspect of your well-being.
+
+
+          By visiting my site, you've already taken the first step on a
+          transformative journey.  A journey to discover your joy, your
+          fulfillment, and your ability to thrive no matter what life throws
+          your way.  If you are looking to create positive change in your life,
+          you have come to the right place.
 
 
           I embrace Life Harmony, viewing work as an integral, harmonious part
