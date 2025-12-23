@@ -12,7 +12,7 @@ pageSections:
       Are you ready to connect to
 
       PLAY, PURPOSE , PERSONAL POWER?
-    image: /beach.webp
+    image: /Untitled%20design%20-%203.png
     _template: heroSection
   - title: Play at WOW Career & Life Coaching
     descriptionBlocks:
